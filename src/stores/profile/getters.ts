@@ -8,5 +8,9 @@ export const getters:GetterTree<ProfileState,RootState> = {
     const firstName = (user && user.firstName) || ''
     const lastName = (user && user.lastName)|| ''
     return `${firstName} ${lastName}`
+  },
+  userInfo(state):object{
+    const { user } = state
+    return user||{}
   }
 }
